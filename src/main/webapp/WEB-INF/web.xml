@@ -5,22 +5,16 @@
 <web-app>
 	<display-name>Cram Schedule</display-name>
 	<servlet>
-		<servlet-name>base</servlet-name>
-		<servlet-class>me.blyf.cram.serv.BaseServlet</servlet-class>
-	</servlet>
-	
-	<servlet>
 		<servlet-name>service</servlet-name>
 		<servlet-class>me.blyf.cram.serv.Service</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>me.blyf.cram.serv.Login</servlet-class>
+	</servlet>
 	<servlet-mapping>
-		<servlet-name>service</servlet-name>
-		<url-pattern>*.html</url-pattern>
+		<servlet-name>login</servlet-name>
+		<url-pattern>/login</url-pattern>
 	</servlet-mapping>
-
-<!-- 	<servlet-mapping> -->
-<!-- 		<servlet-name>base</servlet-name> -->
-<!-- 		<url-pattern>/base/*</url-pattern> -->
-<!-- 	</servlet-mapping> -->
 </web-app>
